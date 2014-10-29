@@ -109,7 +109,8 @@
             // Get physical paths of where the files resides
             $path = Flight::cfg()->get('realBasePath') . '/builds/full';
             // Get the file list and parse it
-    		$files = preg_grep( '/^([^.Thumbs])/', scandir( $path ) );
+    		#$files = preg_grep( '/^([^.Thumbs])/', scandir( $path ) );
+            $files = preg_grep( '/.*.zip/', scandir( $path ) );
             if ( count( $files ) > 0  ) {
                 foreach ( $files as $file ) {
 

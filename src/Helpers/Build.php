@@ -57,7 +57,10 @@
                     4 => [MODEL] (ex. i9100, i9300, etc.)
                 )
             */
-            preg_match_all( '/cm-([0-9\.]+-)(\d+-)?([a-zA-Z0-9]+-)?([a-zA-Z0-9]+)/', $fileName, $tokens );
+            //preg_match_all( '/cm-([0-9\.]+-)(\d+-)?([a-zA-Z0-9]+-)?([a-zA-Z0-9]+)/', $fileName, $tokens );
+            //TN-BMFR.6.0.0-20141029-NIGHTLY-flo.zip
+            preg_match_all( '/^TN-BMFR.([0-9\.]+-)(\d+-)?([a-zA-Z0-9]+-)?([a-zA-Z0-9]+)/', $fileName, $tokens ); 
+            
             $tokens = $this->removeTrailingDashes( $tokens );
 
             $this->filePath = $physicalPath . '/' . $fileName;
