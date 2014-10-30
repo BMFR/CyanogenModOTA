@@ -168,7 +168,7 @@
          * @return string The Url value
          */
         public function getUrl() {
-        	return $this->url;
+        	return (str_replace("CyanogenModOTA/", "", ("http://updates.linuxdork.com" . $this->url)));
         }
 
         /**
@@ -184,7 +184,7 @@
          * @return string The changelog Url value
          */
         public function getChangelogUrl() {
-        	return $this->changelogUrl;
+        	return (str_replace("CyanogenModOTA/", "", ("http://updates.linuxdork.com" . $this->changelogUrl))); //$this->changelogUrl;
         }
 
         /**
